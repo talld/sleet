@@ -1,9 +1,22 @@
+#
 # project sources
+#
+
+
 
 set(SLEET_SRC "")
 
-set(SLEET_SRC
-        main.cpp)
+set( SLEET_SRC
+        main.cpp
+        Render/Render.cpp
+        Render/Instance/Instance.cpp
+    )
+
+include_directories(
+        Render
+        Render/Instance
+)
+
 
 add_executable(sleet ${SLEET_SRC})
 
